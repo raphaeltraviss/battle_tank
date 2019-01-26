@@ -1,0 +1,10 @@
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+BattleTank.VC.*
+BattleTank.sln
+Content/StarterContent/
+.vs/
+
