@@ -28,7 +28,7 @@ private:
 	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
 	void AimTowardsCrosshair();
 	AimLine GetAimLine() const;
-	bool ATankPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
+	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
 
 	UPROPERTY(EditAnywhere)
 	float CrosshairXLocation = 0.5;
