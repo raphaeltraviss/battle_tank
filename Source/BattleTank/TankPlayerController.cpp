@@ -43,11 +43,23 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& OutHitLocation) cons
 	// Line-trace along that look direction, and report any hit actors.
 	FVector LookDirection;
 	if (GetLookDirection(ScreenLocation, LookDirection)) {
-		UE_LOG(LogTemp, Warning, TEXT("The world direction is %s"), *LookDirection.ToString())
+		UE_LOG(LogTemp, Warning, TEXT("The wdddddddddorld direction is %s"), *LookDirection.ToString())
 	}
 	
-
-	/*AimLine AimLine = GetAimLine();
+  
+  
+	AimLine AimLine = GetAimLine();
+  
+  DrawDebugLine(
+                GetWorld(),
+                AimLine.Start,
+                AimLine.End,
+                FColor(255,0,0),
+                false, -1, 0,
+                12.333
+                );
+  
+  
 	FCollisionQueryParams TraceParameters(FName(TEXT("")), false, GetOwner());
 	FHitResult Hit;
 	GetWorld()->LineTraceSingleByObjectType(
@@ -62,7 +74,10 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& OutHitLocation) cons
 		UE_LOG(LogTemp, Warning, TEXT("Nothing is being hit.  "));
 		return false;
 	}
-	OutHitLocation = ActorHit->GetActorLocation();*/
+  else {
+    UE_LOG(LogTemp, Warning, TEXT("Actor hit!"));
+  }
+	OutHitLocation = ActorHit->GetActorLocation();
 
 	return true;
 }
